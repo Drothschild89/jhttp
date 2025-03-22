@@ -38,11 +38,18 @@ pipeline:
                     shell: Sh
                     command: |
                       mvn clean package dependency:copy-dependencies
-                  reports:
-                    type: JUnit
-                    spec:
-                      paths:
-                        - /path/to/test/report.xml
+              - step:
+                  type: Run
+                  name: run test
+                  identifier: run_test
+                  spec:
+                    shell: Sh
+                    command: mvn test
+                    reports:
+                      type: JUnit
+                      spec:
+                        paths:
+                          - target/surefire-reports/*.xml
           platform:
             arch: Amd64
             os: Linux
