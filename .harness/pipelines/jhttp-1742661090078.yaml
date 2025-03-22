@@ -38,6 +38,11 @@ pipeline:
                     shell: Sh
                     command: |
                       mvn clean package dependency:copy-dependencies
+                  reports:
+                    type: JUnit
+                    spec:
+                      paths:
+                        - /path/to/test/report.xml
           platform:
             arch: Amd64
             os: Linux
