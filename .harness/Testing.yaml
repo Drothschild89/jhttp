@@ -64,6 +64,13 @@ pipeline:
             spec: {}
             type: Cloud
         type: CI
+    - stage:
+        name: Deploy stage after CI stage
+        identifier: Deploy_stage_after_CI_stage
+        tags: {}
+        template:
+          templateRef: My_Canary_Deploy_Template
+          versionLabel: "1.0"
   identifier: Testing
   tags: {}
   name: Testing
