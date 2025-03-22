@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Drothschild89_jhttp_1742661103966-pr-trigger-input-set
+  identifier: Build_Drothschild89_jhttp_1742661103966prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Drothschild89_jhttp_1742661103966
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
